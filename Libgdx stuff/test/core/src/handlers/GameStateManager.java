@@ -5,10 +5,6 @@ import main.Game;
 import states.GameState;
 import states.Play;
 
-/**
- *
- * @author Garrison
- */
 public class GameStateManager {
     
     private Game game;

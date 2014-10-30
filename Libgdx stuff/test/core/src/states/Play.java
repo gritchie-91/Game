@@ -12,10 +12,6 @@ import handlers.MyContactListener;
 import handlers.MyInput;
 import main.Game;
 
-/**
- *
- * @author Garrison
- */
 public class Play extends GameState {
     
     private World world;

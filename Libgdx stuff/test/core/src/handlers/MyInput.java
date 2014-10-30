@@ -1,9 +1,5 @@
 package handlers;
 
-/**
- *
- * @author Garrison
- */
 public class MyInput {
     
     public static boolean[] keys;

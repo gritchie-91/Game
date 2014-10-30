@@ -3,10 +3,6 @@ package handlers;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 
-/**
- *
- * @author Garrison
- */
 public class MyInputProcessor extends InputAdapter {
     
     public boolean keyDown(int k){

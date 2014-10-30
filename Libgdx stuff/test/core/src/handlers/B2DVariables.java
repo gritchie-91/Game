@@ -1,9 +1,5 @@
 package handlers;
 
-/**
- *
- * @author Garrison
- */
 public class B2DVariables {
     
     public static final float PPM = 100;
