@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="96" height="30" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="orangeGround" tilewidth="16" tileheight="16">
+  <image source="LowResMap/orangeGround.png" width="112" height="32"/>
+ </tileset>
+ <tileset firstgid="15" name="Water" tilewidth="16" tileheight="16">
+  <image source="LowResMap/Water.png" width="16" height="32"/>
+ </tileset>
+ <tileset firstgid="17" name="spikes" tilewidth="16" tileheight="16">
+  <image source="LowResMap/spikes.png" width="16" height="16"/>
+ </tileset>
+ <tileset firstgid="18" name="springboardDown" tilewidth="16" tileheight="16">
+  <image source="LowResMap/springboardDown.png" width="16" height="16"/>
+ </tileset>
+ <tileset firstgid="19" name="bg" tilewidth="16" tileheight="16">
+  <image source="bg.png" width="16" height="16"/>
+ </tileset>
+ <tileset firstgid="20" name="Background" tilewidth="16" tileheight="16">
+  <image source="LowResMap/Background.png" width="80" height="48"/>
+ </tileset>
+ <tileset firstgid="35" name="flagRed2" tilewidth="16" tileheight="16">
+  <image source="LowResMap/flagRed2.png" width="16" height="16"/>
+ </tileset>
+ <layer name="Background" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMA6B1WP+uzzGuYJNUVVVVVVVVVVWdDADwzQGRpasB
+  </data>
+ </layer>
+ <layer name="BackgroundTile" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlkESgjAMRXMIXSgI0fsfUlgwg5mWNrQhFv6b+ds0PpLanoj6SF6UR7dRQ1NHU7NG9vRVmxr9wf9+4N8X+PcF/n2Bf1/g35cr+R8q9FWbK/nH/OfDU96r3BNn5OQm6sF/PvMZY+Kc0B0T64OnfCr0VUor/pnK9+Ef5l1i6X/ed6s97+j3PpEJfZ9W/C97rvUv74fHlKeijoYuUTc0E634L53/I955uf6XmRiM+ihla381/kP/e9o90nCW+Y+R+n1rmOLfcY7FO4MTdeV7aTTqwwqmtvqVyJ1safbPgLx/4P9Y4N8X+PeFyf4NAAAAAAAAAAAavvpTSEo=
+  </data>
+ </layer>
+ <layer name="Water" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt0cEJwDAMBEF3EPdfbRqQQQY7B2EG7qfXagwAAAAAAAAAuO9ZjG/MYhX/uaPbv3PDvqp/Z5yhf5b+Wfpn6Z+lf9bf+7/cIgeX
+  </data>
+ </layer>
+ <layer name="Ground" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlMEOhCAQxdBVE139/98Vr0QMyzJ5E2mT3giMVQkBrPlG94xgD/210F8L/bXQXwv9tdBfC/210F8L/bXQXwv9tXjrv0bHQjcncyx/nOOt/9M8qccL5qC/dg5F/yk6hPt/+fMwD/3b8Muz0b899C87xwqr/te9Nt+4JGtyd1/tPViyX805Vlj1z+17FKzxaO07bflt9dzfu/Snf8/Sn/49S3/69yz96W/pCQYhN3w=
+  </data>
+ </layer>
+ <layer name="Spikes" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt00ERAAAIw7BZwL9ZvmgYyV0lNAEAAACAfnMCOvgaAAAAAOCnBcC3AGc=
+  </data>
+ </layer>
+ <layer name="Spring" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt0kkRAAAIxLDVgH+xyOCYREEfTQAAAAAAAIDrajqAt7wFAADANg1nxgAl
+  </data>
+ </layer>
+ <layer name="Finish" width="96" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztziEBAAAIA7B3oX9H5B0WsyVYAgAAAAAAAFDzHQAAAAA4LHbSACQ=
+  </data>
+ </layer>
+</map>

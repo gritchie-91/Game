@@ -3,6 +3,7 @@ package handlers;
 import java.util.Stack;
 import main.Game;
 import states.GameState;
+import states.Menu;
 import states.Play;
 
 public class GameStateManager {
@@ -11,12 +12,14 @@ public class GameStateManager {
     
     private Stack<GameState> gameStates;
     
+    public static final int MENU = 83374329;
     public static final int PLAY = 900010;
+    public static final int WIN = 789456;
     
     public GameStateManager(Game game){
         this.game = game;
         gameStates = new Stack<GameState>();
-        pushState(PLAY);
+        pushState(MENU);
     }
     
     public Game game(){ 
@@ -34,6 +37,8 @@ public class GameStateManager {
     private GameState getState(int state){
         if(state == PLAY) 
             return new Play(this);
+        else if(state == MENU)
+            return new Menu(this);
         return null;
     }
     

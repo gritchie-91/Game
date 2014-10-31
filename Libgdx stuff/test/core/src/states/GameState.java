@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import main.Game;
 import handlers.GameStateManager;
 
+
 public abstract class GameState {
     
     protected GameStateManager gsm;

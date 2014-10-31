@@ -8,18 +8,45 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 
 public class MyContactListener implements ContactListener {
     
-    private boolean playerOnGround;
+    private int numFootContacts;
+    private boolean isOnSpring;
+    private boolean playerDead;
+    private boolean playerWin;
     
     public void beginContact(Contact c){
         
         Fixture fa = c.getFixtureA();
         Fixture fb = c.getFixtureB();
         
-        if(fa.getUserData() != null && fa.getUserData().equals("foot")){
-            playerOnGround = true;
+        if(fa.getUserData() != null && fa.getUserData().equals("foot")) {
+            numFootContacts++;
         }
-        if(fb.getUserData() != null && fb.getUserData().equals("foot")){
-            playerOnGround = true;
+        if(fb.getUserData() != null && fb.getUserData().equals("foot")) {
+            numFootContacts++;
+        }
+        if(fa.getUserData() != null && fa.getUserData().equals("spikes")) {
+            playerDead = true;
+        }
+        if(fb.getUserData() != null && fb.getUserData().equals("spikes")) {
+            playerDead = true;
+        }
+        if(fa.getUserData() != null && fa.getUserData().equals("water")) {
+            playerDead = true;
+        }
+        if(fb.getUserData() != null && fb.getUserData().equals("water")) {
+            playerDead = true;
+        }
+        if(fa.getUserData() != null && fa.getUserData().equals("flag")) {
+            playerWin = true;
+        }
+        if(fb.getUserData() != null && fb.getUserData().equals("flag")) {
+            playerWin = true;
+        }
+        if(fa.getUserData() != null && fa.getUserData().equals("spring")) {
+            isOnSpring = true;
+        }
+        if(fb.getUserData() != null && fb.getUserData().equals("spring")) {
+            isOnSpring = true;
         }
     }
     
@@ -28,16 +55,25 @@ public class MyContactListener implements ContactListener {
         Fixture fa = c.getFixtureA();
         Fixture fb = c.getFixtureB();
         
-        if(fa.getUserData() != null && fa.getUserData().equals("foot")){
-            playerOnGround = false;
+        if(fa.getUserData() != null && fa.getUserData().equals("foot")) {
+            numFootContacts--;
         }
-        if(fb.getUserData() != null && fb.getUserData().equals("foot")){
-            playerOnGround = false;
+        if(fb.getUserData() != null && fb.getUserData().equals("foot")) {
+            numFootContacts--;
+        }
+        if(fa.getUserData() != null && fa.getUserData().equals("spring")) {
+            isOnSpring = false;
+        }
+        if(fb.getUserData() != null && fb.getUserData().equals("spring")) {
+            isOnSpring = false;
         }
     }
     
-    public boolean isPlayerOnGround(){
-        return playerOnGround;
+    public boolean isPlayerOnGround() { return numFootContacts > 0; }
+    public boolean isPlayerDead() { return playerDead; }
+    public boolean playerWon(){ return playerWin; }
+    public boolean isPlayerOnSpring(){
+        return isOnSpring;
     }
     
     
